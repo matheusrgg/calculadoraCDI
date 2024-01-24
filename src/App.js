@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import InvestmentForm from './components/InvestmentForm';
+import Menu from './components/menu';
 import logo from './assets/investment-calculator-logo.png';
 
 import TabelaRentabilidade from './components/InvestmentTable';
@@ -47,12 +48,7 @@ function App() {
 
   return (
     <div className="App flex justify-center">
-      <header className="header">
-        <img src={logo} alt="logo" />
-        <h1>Investment Calculator</h1>
-        <button>LCA</button>
-        <button>CDB</button>
-      </header>
+      <Menu />
       <h1 className='flex justify-center'>Calculadora de Rentabilidade LCA</h1>
       <InvestmentForm onSaveExpenseData={saveExpenseDataHandler} />
       <TabelaRentabilidade tableData={tableData} />
